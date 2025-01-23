@@ -37,11 +37,11 @@ jobs:
           # key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             # Pull the latest image
-            docker pull ${{ secrets.DOCKER_USERNAME }}/$IMG_NAME:latest
+            docker pull ${{ secrets.DOCKER_USERNAME }}/${{ env.IMG_NAME }}:latest
             
             # Stop and remove existing container if it exists
-            docker stop $IMG_NAME || true
-            docker rm $IMG_NAME || true
+            docker stop ${{ env.IMG_NAME }} || true
+            docker rm ${{ env.IMG_NAME }} || true
             
             # Run the new image
-            docker run -d --name $IMG_NAME ${{ secrets.DOCKER_USERNAME }}/$IMG_NAME:latest
+            docker run -d --name ${{ env.IMG_NAME }} ${{ secrets.DOCKER_USERNAME }}/${{ env.IMG_NAME }}:latest
