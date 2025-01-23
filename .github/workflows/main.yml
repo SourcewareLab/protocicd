@@ -44,4 +44,4 @@ jobs:
             docker rm ${{ env.IMG_NAME }} || true
             
             # Run the new image
-            docker run -d --name ${{ env.IMG_NAME }} ${{ secrets.DOCKER_USERNAME }}/${{ env.IMG_NAME }}:latest
+            docker run -d --name ${{ env.IMG_NAME }} -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/${{ env.IMG_NAME }}:latest
