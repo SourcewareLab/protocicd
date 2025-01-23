@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMG_NAME = protocicd
+  IMG_NAME: protocicd
 
 jobs:
   deploy:
