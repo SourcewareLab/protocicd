@@ -17,7 +17,7 @@ func main() {
 
 	fmt.Println("Creating index route")
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("test"))
+		w.Write([]byte("<h1>test</h1>"))
 	})
 
 	fmt.Println("Server listening on :8080")
