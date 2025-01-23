@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-	fmt.Println("Setting up muxx")
+	fmt.Println("Setting up mux")
 	mux := http.NewServeMux()
 
 	server := http.Server{
