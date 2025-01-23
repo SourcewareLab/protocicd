@@ -33,6 +33,7 @@ jobs:
         with:
           host: ${{ secrets.VM_HOST }}
           username: ${{ secrets.VM_USER }}
+          password: ${{ secrets.VM_PASS }}
           # key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             # Pull the latest image
